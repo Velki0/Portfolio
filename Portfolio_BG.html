@@ -6,61 +6,139 @@
 <meta name="description" content="Bienvenue sur mon Portfolio. je vous laisse découvrir ma présentation et n'hésitez pas à me contacter pour plus d'informations.">
 <link href="css/theme.css" rel="stylesheet" type="text/css">
 <title>Baptiste Gérardin - Portfolio</title>
-</head>
-	
+</head>	
 <body>
 	<header>
-		<img id="icon_bg" alt="Logo" src="images/logo.svg">
+		<img id="iconBg" alt="Logo" src="images/logo.svg">
 		<nav>
 			<ul>
 				<li><a href="#accueil">Acceuil</a></li>
-				<li><a href="#a_propos">À propos</a></li>
-				<li><a href="#Competences">Compétences</a></li>
+				<li><a href="#aPropos">À propos</a></li>
+				<li><a href="#competences">Compétences</a></li>
 			</ul>
 		</nav>
-		<form><button class="bouton_contact" type="submit" formtype="#Contact">Contact</button></form>
+		<a id="boutonContact" href="#contact">Contact</a>
 	</header>
 	<main id="accueil">
-		<div id="nom_et_photo">
+		<div id="nomEtPhoto">
 			<h1 id="nom">Baptiste&nbsp; &nbsp;<br>
 		    &nbsp; &nbsp; &nbsp; Gérardin</h1>
-			<img id="photo_profil" alt="Photo de Profil" src="images/photo_profil.png">
+			<img id="photoProfil" alt="Photo de Profil" src="images/photo_profil.png">
 		</div>
-		<div id="titre_et_description">
-			<div class="icons_rs">
-				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="icon_linkedin" src="images/linkedin_icon.svg"></a>
-				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="icon_github" src="images/github_icon.svg"></a>
+		<div id="titreEtDescription">
+			<div class="iconsRs">
+				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
+				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
 			</div>
 			<h2 id="titre">Concepteur / Développeur d’applications Full Stack - Java - DevOps</h2><br>
-        	<h3 id="description_general">Docteur en chimie organique, je suis en reconversion professionnelle dans le domaine du développement informatique. Acutellement en formation pour la préparation d'un diplôme RNCP de niveau 6, je suis activement à la recherche d'une entreprise afin de signer un contrat d'apprentissage et de mettre en pratique mes nouvelles compétences</h3>
-			<form><button class="bouton_contact" type="submit" formtype="#Contact">Contact</button></form>
+        	<h3 id="descriptionGeneral">Docteur en chimie organique, je suis en reconversion professionnelle dans le domaine du développement informatique. Acutellement en formation pour la préparation d'un diplôme RNCP de niveau 6, je suis activement à la recherche d'une entreprise afin de signer un contrat d'apprentissage et de mettre en pratique mes nouvelles compétences</h3>
         </div>
 	</main>
-	<section id="a_propos">
-		<div id="contenu_a_propos">
+	<section id="aPropos">
+		<div id="contenuAPropos">
 			<div id="paragraphes">
-				<div id="paragraphe_moi">
-					<h1>À propos de moi :</h1>
-					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</h2>
+				<div id="paragrapheMoi">
+					<h2>À propos de moi :</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</p>
 				</div>
-				<div id="paragraphe_objectifs">
-					<h1>Mes Objectifs :</h1>
-					<h2> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</h2>
+				<div id="paragrapheObjectifs">
+					<h2>Mes Objectifs :</h2>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</p>
 				</div>
 			</div>
-			<div id="cv_et_telechargement">
+			<div id="cvEtTelechargement">
 				<a href="fichiers/CV_Baptiste_Gerardin.pdf" target="_blank"><img id="cv" alt="image de mon CV" src="images/cv.png"></a>
-				<a href="fichiers/CV_Baptiste_Gerardin.pdf" download="CV_Baptiste_Gerardin.pdf" id="telecharger_cv"><p>Téléchargez mon C.V. ici</p>
+				<a href="fichiers/CV_Baptiste_Gerardin.pdf" download="CV_Baptiste_Gerardin.pdf" id="cvTelechargement"><p>Téléchargez mon C.V. ici</p>
 				</a>
 			</div>
 		</div>
-		<p id="demande_info">Si mon profil vous intéresse, n’hésitez pas à me contacter pour plus d’informations</p>
+		<p id="demandeInfo">Si mon profil vous intéresse, n’hésitez pas à me contacter pour plus d’informations</p>
 	</section>
-	<footer id="pied_de_page">
-		<p id="texte_pied_de_page">© 2025 Baptiste Gérardin - Tous droits réservés</p>
-		<div class="icons_rs">
-				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="icon_linkedin" src="images/linkedin_icon.svg"></a>
-				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="icon_github" src="images/github_icon.svg"></a>
+	<section id="competences">
+		<h2 id="titreCompetences">Compétences :</h2>
+		<div id="ensembleCompetences">
+			<div id="tableauCompetences">
+				<div class="ligneCompetences">
+					<div class="celluleCompetence">
+						<h3 class="titreCelluleCompetence">Front-End</h3>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+							<li>TypeScript</li>
+							<li>Angular</li>
+						</ul>
+					</div>
+					<div class="celluleCompetence">
+						<h3 class="titreCelluleCompetence">Back-End</h3>
+						<ul>
+							<li>Java</li>
+							<li>Spring</li>
+							<li>Maven</li>
+							<li>Docker</li>
+							<li>NodeJS</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ligneCompetences">
+					<div class="celluleCompetence">
+						<h3 class="titreCelluleCompetence">Base de Données</h3>
+						<ul>
+							<li>MySQL / MariaDB</li>
+							<li>MongoDB</li>
+							<li>PostgreSQL</li>
+						</ul>
+					</div>
+					<div class="celluleCompetence">
+						<h3 class="titreCelluleCompetence">DevOps</h3>
+						<ul>
+							<li>Agile / Scrum</li>
+							<li>UML</li>
+							<li>Git</li>
+							<li>GitHub</li>
+							<li>CI/CD</li>
+							<li>Jenkins</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="chimieCompetences">
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<h2 id="titreContact">Contact :</h2>
+		<form id="formulaireContact">
+			<div class="celluleContact">
+				<label class="labelContact" for="prenomNom">Nom / Prénom</label>
+				<input id="prenomNom" class="inputContact" type="text" placeholder="Comment dois-je vous appeler ?">
+				<p id="erreurPrenomNom">Nom incorrect</p>		   
+			</div>
+			<div class="celluleContact">
+				<label class="labelContact" for="email">Email</label>
+				<input id="email" class="inputContact" type="text" placeholder="pouetpouet@pouet.com">
+				<p id="erreurEmail">Email incorrect</p>		   
+			</div>
+			<div class="celluleContact">
+				<label class="labelContact" for="sujet">Sujet</label>
+				<input id="sujet" class="inputContact" type="text" placeholder="Quelle est votre demande ?">
+				<p id="erreurSujet">Sujet incorrect</p>		   
+			</div>
+			<div class="celluleContact">
+				<label class="labelContact" for="message">Message</label>
+				<textarea id="message" class="inputContact message" type="text" placeholder="Laissez moi un petit message ici."></textarea>
+				<p id="erreurMessage">Message incorrect</p>		   
+			</div>
+			<div id="envoiContact">
+				<button id="envoiFormulaireContact">Envoyer</button>
+			</div>
+		</form>
+	</section>
+	<footer id="piedDePage">
+		<p id="textePiedDePage">© 2025 Baptiste Gérardin - Tous droits réservés</p>
+		<div class="iconsRs">
+				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
+				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
 		</div>
 	</footer>
 </body>
