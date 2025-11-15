@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bienvenue sur mon Portfolio. je vous laisse découvrir ma présentation et n'hésitez pas à me contacter pour plus d'informations.">
+<meta name="author" content="Baptiste Gérardin">
+<meta name="title" property="og:title" content="Baptiste Gérardin - Portfolio">
+<meta name="description" content="Bienvenue sur mon Portfolio. Je vous laisse découvrir ma présentation en tant que concepteur et développeur d'applications Full Stack. N'hésitez pas à me contacter pour plus d'informations.">
 <link href="css/theme.css" rel="stylesheet" type="text/css">
+<script defer src="js/script.js"></script>
 <title>Baptiste Gérardin - Portfolio</title>
 </head>	
 <body>
+	<!-- Header du site -->
 	<header>
-		<img id="iconBg" alt="Logo" src="images/logo.svg">
-		<nav>
-			<ul>
+		<a href="#accueil"><img id="iconBg" alt="Logo" src="images/logo.svg"></a>
+		<nav role="navigation">
+			<ul id="menuNav">
 				<li><a href="#accueil">Acceuil</a></li>
 				<li><a href="#aPropos">À propos</a></li>
 				<li><a href="#competences">Compétences</a></li>
@@ -19,6 +23,7 @@
 		</nav>
 		<a id="boutonContact" href="#contact">Contact</a>
 	</header>
+	<!-- Accueil / Page principale du site -->
 	<main id="accueil">
 		<div id="nomEtPhoto">
 			<h1 id="nom">Baptiste&nbsp; &nbsp;<br>
@@ -26,7 +31,7 @@
 			<img id="photoProfil" alt="Photo de Profil" src="images/photo_profil.png">
 		</div>
 		<div id="titreEtDescription">
-			<div class="iconsRs">
+			<div class="iconsRS">
 				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
 				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
 			</div>
@@ -34,16 +39,17 @@
         	<h3 id="descriptionGeneral">Docteur en chimie organique, je suis en reconversion professionnelle dans le domaine du développement informatique. Acutellement en formation pour la préparation d'un diplôme RNCP de niveau 6, je suis activement à la recherche d'une entreprise afin de signer un contrat d'apprentissage et de mettre en pratique mes nouvelles compétences</h3>
         </div>
 	</main>
+	<!-- Section A propos -->
 	<section id="aPropos">
 		<div id="contenuAPropos">
 			<div id="paragraphes">
 				<div id="paragrapheMoi">
 					<h2>À propos de moi :</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</p>
+					<p>Je m'appelle Baptiste, j'ai 29 ans et je suis en formation pour devenir<br><span>Concepteur / Développeur Full Stack.</span><br>Après être arrivé au terme de mon parcours académique en chimie, j'ai appris à aborder les défis avec persévérance et méthode, des qualités que je mets désormais au service de ma reconversion professionnelle vers le développement informatique.<br>Depuis 2025, je me forme de manière autodidacte avec plusieurs petits projets et notamment un pour la création d’une API interagissant avec un jeu vidéo, illustrant ainsi ma capacité à allier passion et apprentissage technique.</p>
 				</div>
 				<div id="paragrapheObjectifs">
 					<h2>Mes Objectifs :</h2>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet arcu massa, non aliquam augue pretium ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla non magna laoreet urna faucibus ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac condimentum velit, et finibus felis. Phasellus sed tincidunt diam. Vestibulum aliquet felis est, id tincidunt ipsum sagittis vitae. Fusce semper ipsum eu nibh luctus, in accumsan dolor consectetur. Nulla quis erat nisl.</p>
+					<p> D'un tempérammet rigoureux et curieux, je possède aussi une très grande appétence pour apprendre et appliquer de nouveaux procédés liés aux nouvelles technologies.<br>Aujourd'hui, je recherche activement une entreprise prête à m’accueillir en contrat d’apprentissage, afin de mettre en pratique mes connaissances théoriques et de m’immerger dans des projets concrets.<br>Mon ambition est de contribuer efficacement à une équipe, tout en continuant à apprendre et à évoluer dans un environnement stimulant, où la confiance et la bienveillance sont au cœur de la relation professionnelle.<br>Je suis conscient que cette reconversion est un challenge, mais ma détermination et ma soif d’apprendre sont mes principaux atouts.</p>
 				</div>
 			</div>
 			<div id="cvEtTelechargement">
@@ -52,8 +58,9 @@
 				</a>
 			</div>
 		</div>
-		<p id="demandeInfo">Si mon profil vous intéresse, n’hésitez pas à me contacter pour plus d’informations</p>
+		<p class="demandeInfo">Si mon profil vous intéresse, n’hésitez pas à me <a href="#contact">contacter</a> pour plus d’informations</p>
 	</section>
+	<!-- Section Compétences -->
 	<section id="competences">
 		<h2 id="titreCompetences">Compétences :</h2>
 		<div id="ensembleCompetences">
@@ -102,10 +109,30 @@
 					</div>
 				</div>
 			</div>
-			<div id="chimieCompetences">
+			<div id="chimie">
+				<div id="illustrationEtPasseEnChimie">
+					<img id="illustrationChimie" alt="Illustration d'un benzène et et un erlenmeyer" src="images/chimie.svg">
+					<div id="passeEnChimie">
+						<a id="theseChimie" href="https://theses.hal.science/tel-04187215" target="_blank"><img id="iconeThese" alt="Icone d'un livre pour représenter une thèse" src="images/these.png"><p>Ma thèse</p></a>
+						<p id="publiChimie">Publications :</p>
+						<ul id="listePubliChimie">
+							<li>
+								<img class="iconePublication" alt="Icone représentation une parution dans un journal scientifique" src="images/publication.png">
+								<a href="https://pubs.acs.org/doi/abs/10.1021/acs.orglett.1c00812" target="_blank">C-H Arrylation</a>
+							</li>
+							<li>
+								<img class="iconePublication" alt="Icone représentation une parution dans un journal scientifique" src="images/publication.png">
+								<a href="https://pubs.acs.org/doi/10.1021/acs.orglett.2c03223" target="_blank">Annulation de Arylindoles</a>
+							</li>
+						</ul>
+					  <p id="motsclefsChimie">Mots-Clefs : Synthèse orgnanique, Catalyse par les Métaux de transistion, Réactions dominos, Activation C-H</p>
+                    </div>
+				</div>
 			</div>
 		</div>
+		<p class="demandeInfo">Une catégorie "Projets" fera bientôt son apparition, n’hésitez pas à me retrouver sur <a href="https://github.com/Velki0">GitHub</a> si vous êtes curieux !<br> Vous pourrez retrouver ce portfolio, quelques petits projets personnels ou bien des exercices de ma formation.</p>
 	</section>
+	<!-- Section Contact -->
 	<section id="contact">
 		<h2 id="titreContact">Contact :</h2>
 		<form id="formulaireContact">
@@ -130,13 +157,15 @@
 				<p id="erreurMessage">Message incorrect</p>		   
 			</div>
 			<div id="envoiContact">
-				<button id="envoiFormulaireContact">Envoyer</button>
+				<button id="envoiFormulaireContact" type="submit">Envoyer</button>
+				<p id="confirmationEnvoi">Envoyé ! Merci pour le message !</p>	
 			</div>
 		</form>
 	</section>
+	<!-- Footer du site -->
 	<footer id="piedDePage">
 		<p id="textePiedDePage">© 2025 Baptiste Gérardin - Tous droits réservés</p>
-		<div class="iconsRs">
+		<div class="iconsRS">
 				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
 				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
 		</div>

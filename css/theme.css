@@ -10,22 +10,32 @@
 	font-family: Times, "Times New Roman", "serif";
 	font-weight: normal;
 }
+
 /* Body */
 body {
 	background-image: url("../images/bg.svg");
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 }
+
 /* Navigation */
 header {
 	position: fixed;
-	width: 100%;
-	padding: 20px;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%); 
+	width: 70%;
+	padding: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	display: flex;
-	flew-direction: row;
-	justify-content: space-evenly;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
+	background-color: rgba(0,0,0,0.40);
+	border-radius: 80px;
 }
+
 /* Icon du site */
 #iconBg {
 	width: 90px;
@@ -34,10 +44,10 @@ header {
 #iconBg:hover {
 	transform: scale(1.1);
 }
+
 /* Navigation */
-header nav ul li {
+#menuNav li {
 	float: left;
-	color: #FFFFFF;
 	font-size: 16px;
 	text-align: left;
 	margin-right: 40px;
@@ -45,15 +55,14 @@ header nav ul li {
 	list-style-type: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
-ul li:hover {
-	color: #00FFFF;
+#menuNav li:hover {
 	transform: scale(1.1);
 }
-ul li a {
+#menuNav li a {
 	color: #FFFFFF;
 	text-decoration: none;
 }
-ul li:hover a {
+#menuNav li:hover a {
 	color: #00FFFF;
 }
 #boutonContact {
@@ -73,9 +82,11 @@ ul li:hover a {
 	border-radius: 15px;
 	transform: scale(1.1);
 }
+
 /* Main */
 #accueil {
 	min-height: 100vh;
+	padding-top: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -112,18 +123,19 @@ ul li:hover a {
 	letter-spacing: 2px;
 	font-weight: normal;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 #descriptionGeneral {
-	width: 80%;
+	width: 60%;
 	font-size: 16px;
 	color: #FFFFFF;
 	letter-spacing: 2px;
 	text-align: center;
 	margin-bottom: 30px;
 }
+
 /* Icons RS */
-.iconsRs {
+.iconsRS {
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -142,20 +154,16 @@ ul li:hover a {
 .iconGithub:hover {
 	transform: scale(1.15);
 }
+
 /* A propos */
 #aPropos {
 	min-height: 100vh;
 	padding: 8%;
+	padding-top: 10%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-#demandeInfo {
-	font-size: 16px;
-	padding: 10px;
-	color: #A9A9A9;
-	letter-spacing: 2px;
-	text-align: center;
+	background-color: rgba(21,21,21,0.75)
 }
 #contenuAPropos {
 	width: 100%;
@@ -171,7 +179,7 @@ ul li:hover a {
 }
 #paragrapheMoi {
 	width: 70%;
-	padding: 30px;
+	padding: 20px;
 	color: #FFFFFF;
 	letter-spacing: 2px;
 	text-align: center;
@@ -181,9 +189,13 @@ ul li:hover a {
 #paragrapheMoi h2 {
 	color: #4FC3F7;
 	font-size: 26px;
+	margin: 5px;
 }
 #paragrapheMoi p {
 	font-size: 16px;
+}
+#paragrapheMoi p span {
+	color: orange;
 }
 #paragrapheObjectifs {
 	width: 70%;
@@ -197,6 +209,7 @@ ul li:hover a {
 #paragrapheObjectifs h2 {
 	color: #4FC3F7;
 	font-size: 26px;
+	margin: 5px;
 }
 #paragrapheObjectifs p {
 	font-size: 16px;
@@ -226,10 +239,28 @@ ul li:hover a {
 	color: #00FFFF;
 	transform: scale(1.1);
 }
+
+/* Demande d'info, bas de page */
+.demandeInfo {
+	margin: 10px;
+	font-size: 16px;
+	padding: 10px;
+	color: #A9A9A9;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.demandeInfo a {
+	color: #A9A9A9;
+}
+.demandeInfo a:hover {
+	color: #4FC3F7;
+}
+
 /* Competences */
 #competences {
 	min-height: 100vh;
-	padding: 8%;
+	padding: 5%;
+	padding-top: 10%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -237,23 +268,23 @@ ul li:hover a {
 #titreCompetences {
 	color: #4FC3F7;
 	font-size: 32px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #ensembleCompetences {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 #tableauCompetences {
 	width: 40%;
 }
 .ligneCompetences {
-	padding: 0px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: stretch;
+	justify-content: center;
 }
 .celluleCompetence {
 	margin: 20px;
@@ -277,15 +308,24 @@ ul li:hover a {
 .titreCelluleCompetence {
 	margin-bottom: 10px;
 	font-weight: bold;
-	font-size: 20px; 
+	font-size: 20px;
+	cursor: default;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+.titreCelluleCompetence:hover {
+	transform: scale(1.1);
 }
 .celluleCompetence ul {
 	font-size: 16px;
 	list-style-type: none;
 	cursor: default;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+.celluleCompetence ul li:hover {
+	transform: scale(1.1);
 }
 .ligneCompetences:first-child .celluleCompetence:first-child {
-	color: #4FC3F7;
+	color: #E0A000;
 }
 .ligneCompetences:first-child .celluleCompetence:nth-child(2) {
 	color: #FF5959;
@@ -296,10 +336,101 @@ ul li:hover a {
 .ligneCompetences:nth-child(2) .celluleCompetence:nth-child(2) {
 	color: #A135FF;
 }
+#chimie {
+	padding: 20px;
+	padding-left: 0px;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	background: linear-gradient(135deg, #1F0D72, #050505);
+	border-radius: 15px;
+	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#chimie:hover {
+	transform: scale(1.1);
+}
+#illustrationEtPasseEnChimie {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-align: center;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#illustrationChimie {
+	width: 200px;
+}
+#passeEnChimie {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#iconeThese {
+	margin-right: 10px;
+	width: 25px;
+}
+#theseChimie{
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+	color: aqua;
+}
+#theseChimie:hover {
+	color: #4FC3F7;
+	transform: scale(1.1);
+}
+#publiChimie {
+	margin: 10px;
+	margin-bottom: 5px;
+}
+#listePubliChimie {
+	list-style-type: none;
+	font-size: 14px;
+}
+#listePubliChimie li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#listePubliChimie li:hover {
+	transform: scale(1.1);
+}
+#listePubliChimie li a {
+	text-decoration: none;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+	color: aqua;
+}
+#listePubliChimie li a:hover {
+	color: #4FC3F7;
+}
+.iconePublication {
+	margin-right: 10px;
+	height: 15px;
+	width: 15px;
+}
+#motsclefsChimie {
+	margin-top: 20px;
+	align-self: center;
+	font-size: 10px;
+	color: #A9A9A9;
+}
+
 /* Contact */
 #contact {
 	min-height: 100vh;
-	padding: 8%;
+	padding: 5%;
+	padding-top: 10%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -333,15 +464,27 @@ ul li:hover a {
 	letter-spacing: 2px;
 	text-align: left;
 	border-radius: 15px;
-	min-width: 300px; 
+	min-width: 450px; 
 }
 .celluleContact p {
+	margin-bottom: 10px;
 	opacity: 0%;
-	color :red;
+	color : red;
 	font-size: 12px;
 }
+#confirmationEnvoi {
+	margin: 10px;
+	opacity: 0%;
+	color : green;
+	font-size: 18px;
+}
 .message {
-	min-height: 150px;
+	min-height: 100px;
+}
+#envoiContact {
+	display:  flex;
+	flex-direction: column;
+	align-items: center;
 }
 #envoiFormulaireContact {
 	font-size: 16px;
@@ -359,6 +502,7 @@ ul li:hover a {
 	color: #00FFFF;
 	transform: scale(1.1);
 }
+
 /* Pied de page */
 #piedDePage {
 	width: 100%;
