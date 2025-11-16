@@ -7,8 +7,10 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: Times, "Times New Roman", "serif";
+	font-family: Suisseint1, sans-serif;
+	letter-spacing: 0.2px;
 	font-weight: normal;
+	line-height: 140%;
 }
 
 /* Body */
@@ -51,7 +53,6 @@ header {
 	font-size: 16px;
 	text-align: left;
 	margin-right: 40px;
-	letter-spacing: 2px;
 	list-style-type: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
@@ -68,7 +69,6 @@ header {
 #boutonContact {
 	padding: 10px;
 	font-size: 16px;
-	letter-spacing: 2px;	
 	color: #FFFFFF;
 	border-color: #FFFFFF;
 	border-width: 2px;
@@ -119,8 +119,7 @@ header {
 }
 #titre {
 	font-size: 32px;
-	color: #FFFFFF;
-	letter-spacing: 2px;
+	color: #DDDCDC;
 	font-weight: normal;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -128,8 +127,7 @@ header {
 #descriptionGeneral {
 	width: 60%;
 	font-size: 16px;
-	color: #FFFFFF;
-	letter-spacing: 2px;
+	color: #DDDCDC;
 	text-align: center;
 	margin-bottom: 30px;
 }
@@ -163,7 +161,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgba(21,21,21,0.75)
 }
 #contenuAPropos {
 	width: 100%;
@@ -179,17 +176,18 @@ header {
 }
 #paragrapheMoi {
 	width: 70%;
-	padding: 20px;
-	color: #FFFFFF;
-	letter-spacing: 2px;
+	padding: 30px;
+	color: #DDDCDC;
 	text-align: center;
 	margin-right: 200px;
-	margin-left: 20px;
+	margin-bottom: 40px;
+	background-color: #191919;
+	border-radius: 15px;
 }
 #paragrapheMoi h2 {
 	color: #4FC3F7;
 	font-size: 26px;
-	margin: 5px;
+	margin-bottom: 15px;
 }
 #paragrapheMoi p {
 	font-size: 16px;
@@ -200,19 +198,22 @@ header {
 #paragrapheObjectifs {
 	width: 70%;
 	padding: 30px;
-	color: #FFFFFF;
-	letter-spacing: 2px;
+	color: #DDDCDC;
 	text-align: center;
 	margin-left: 200px;
-	margin-right: 20px;
+	background-color: #191919;
+	border-radius: 15px;
 }
 #paragrapheObjectifs h2 {
 	color: #4FC3F7;
 	font-size: 26px;
-	margin: 5px;
+	margin-bottom: 15px;
 }
 #paragrapheObjectifs p {
 	font-size: 16px;
+}
+#paragrapheObjectifs p span {
+	color: orange;
 }
 #cvEtTelechargement {
 	display: flex;
@@ -221,6 +222,7 @@ header {
 }
 #cv {
 	width: 400px;
+	margin: 10px;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #cv:hover {
@@ -228,16 +230,16 @@ header {
 	transform: scale(1.05);
 }
 #cvTelechargement {
-	padding: 20px;
+	padding: 15px;
 	color: #FFFFFF;
-	letter-spacing: 2px;
 	text-align: center;
 	text-decoration: none;
+	background-color: #191919;
+	border-radius: 15px;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #cvTelechargement:hover {
 	color: #00FFFF;
-	transform: scale(1.1);
 }
 
 /* Demande d'info, bas de page */
@@ -246,14 +248,14 @@ header {
 	font-size: 16px;
 	padding: 10px;
 	color: #A9A9A9;
-	letter-spacing: 2px;
 	text-align: center;
 }
 .demandeInfo a {
 	color: #A9A9A9;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 .demandeInfo a:hover {
-	color: #4FC3F7;
+	color: #00FFFF;
 }
 
 /* Competences */
@@ -296,9 +298,8 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	letter-spacing: 2px;
 	text-align: center;
-	background: linear-gradient(135deg, #1F0D72, #050505);
+	background-color: #191919;
 	border-radius: 15px;
 	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);;
 }
@@ -337,7 +338,7 @@ header {
 	color: #A135FF;
 }
 #chimie {
-	padding: 20px;
+	padding: 35px;
 	padding-left: 0px;
 	width: 30%;
 	display: flex;
@@ -345,7 +346,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	color: #FFFFFF;
-	background: linear-gradient(135deg, #1F0D72, #050505);
+	background-color: #191919;
 	border-radius: 15px;
 	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);
 }
@@ -358,7 +359,6 @@ header {
 	align-items: center;
 	justify-content: space-evenly;
 	font-size: 18px;
-	letter-spacing: 2px;
 	text-align: center;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
@@ -391,6 +391,7 @@ header {
 #publiChimie {
 	margin: 10px;
 	margin-bottom: 5px;
+	color: #DDDCDC;
 }
 #listePubliChimie {
 	list-style-type: none;
@@ -453,18 +454,17 @@ header {
 }
 .labelContact {
 	font-size: 16px;
-	color: #FFFFFF;
-	letter-spacing: 2px;
+	color: #DDDCDC;
 	text-align: center;
 }
 .inputContact {
 	padding: 10px;
 	margin: 10px;
 	font-size: 14px;
-	letter-spacing: 2px;
 	text-align: left;
 	border-radius: 15px;
-	min-width: 450px; 
+	min-width: 450px;
+	background-color: #F4F4F4;
 }
 .celluleContact p {
 	margin-bottom: 10px;
@@ -487,8 +487,7 @@ header {
 	align-items: center;
 }
 #envoiFormulaireContact {
-	font-size: 16px;
-	letter-spacing: 2px;	
+	font-size: 16px;	
 	color: #FFFFFF;
 	width: 120px;
 	height: 45px;
@@ -515,7 +514,6 @@ header {
 #textePiedDePage {
 	font-size: 14px;
 	color: #A9A9A9;
-	letter-spacing: 2px;
 	font-weight: normal;
 	margin-left: 5%;
 }
