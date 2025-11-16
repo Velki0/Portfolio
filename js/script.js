@@ -6,7 +6,7 @@ async function formulaire(prenomNom, email, sujet, message) {
   		method: 'POST',
   		headers: {
     		'content-type': 'application/json',
-    		'X-API-Key': 'sjk_6ca5afa9b4ab42b09129774dce438bd0',
+    		'X-API-Key': 'sjk_***',
   		},
   		body: JSON.stringify({
     		data: {
