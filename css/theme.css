@@ -1,8 +1,9 @@
 @charset "UTF-8";
 @font-face {
-    font-family : Updock;
-    src: url("../fonts/Updock-Regular.ttf");
+    font-family : Planet_Space;
+    src: url("../fonts/Planet_Space.ttf");
 }
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -18,69 +19,140 @@ body {
 	background-image: url("../images/bg.svg");
 	background-repeat: repeat-y;
 	background-size: 100% auto;
+	background-color: #10001B;
 }
 
-/* Navigation */
+/* Header */
 header {
 	position: fixed;
 	top: 20px;
 	left: 50%;
 	transform: translateX(-50%); 
-	width: 70%;
-	padding: auto;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	width: 60%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 	background-color: rgba(0,0,0,0.40);
-	border-radius: 80px;
+	border-radius: 15px;
 }
 
 /* Icon du site */
 #iconBg {
-	width: 90px;
-	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
-}
-#iconBg:hover {
-	transform: scale(1.1);
+	width: 85px;
 }
 
 /* Navigation */
-#menuNav li {
+#menuNavigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+#menuNavigation li {
 	float: left;
 	font-size: 16px;
-	text-align: left;
-	margin-right: 40px;
+	display: flex;
+	margin: 20px;
 	list-style-type: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
-#menuNav li:hover {
+#menuNavigation li:hover {
 	transform: scale(1.1);
 }
-#menuNav li a {
-	color: #FFFFFF;
+#menuNavigation li a {
+	color: #00FFFF;
 	text-decoration: none;
 }
-#menuNav li:hover a {
-	color: #00FFFF;
+#menuNavigation li:hover a {
+	color: #8B01A0;
 }
 #boutonContact {
 	padding: 10px;
 	font-size: 16px;
-	color: #FFFFFF;
-	border-color: #FFFFFF;
-	border-width: 2px;
-	border-radius: 15px;
+	color: #00FFFF;
 	text-decoration: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #boutonContact:hover {
-	color: #00FFFF;
-	border-color: #4FC3F7;
-	border-radius: 15px;
+	color: #8B01A0;
 	transform: scale(1.1);
+}
+
+/* Cacher le menu mobile sur la version Classic */
+.navigationResponsive {
+	display: none;
+}
+.ouvrirMenuBurger {
+	display: none;
+}
+.fermerMenuBurger {
+	display: none;
+}
+
+/* Header Mobile */
+@media only screen and (max-width: 720px) {
+#menuNavigation {
+    display: none;
+}
+#boutonContact {
+	display: none;
+}
+.ouvrirMenuBurger {
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+.ouvrirMenuBurger span {
+  	background-color: #DDDCDC;
+  	height: 3px;
+  	width: 32px;
+  	margin: 4px 5px;
+  	border-radius: 10px;
+}
+.montrer-navigationResponsive {
+  	display: flex;
+  	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: rgba(0,0,0,0.40);
+  	padding: 10px;
+  	border-radius: 15px;
+  	z-index: 2;
+}
+.listeMenuBurger li {
+	list-style-type: none;
+	margin: 15px;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+.listeMenuBurger li:hover {
+	transform: scale(1.05);
+}
+.listeMenuBurger li a {
+	text-decoration: none;
+	color: #00FFFF;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+.listeMenuBurger li a:hover {
+	color: #8B01A0;
+	transform: scale(1.05);
+}
+.montrer-fermerMenuBurger {
+  	display: block;
+	text-decoration: none;
+	color: #00FFFF;
+	font-size: 20px;
+	text-align: right;
+	width: 100%;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+.montrer-fermerMenuBurger:hover {
+	color: #8B01A0;
+	transform: scale(1.05);
+}
+
 }
 
 /* Main */
@@ -102,7 +174,7 @@ header {
 }
 #nom {
 	font-size: 100px;
-	font-family: Updock;
+	font-family: Planet_Space;
 	color: #FFFFFF;
 	margin-right: 40px;
 }
@@ -119,7 +191,7 @@ header {
 }
 #titre {
 	font-size: 32px;
-	color: #DDDCDC;
+	color: #00FFFF;
 	font-weight: normal;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -129,7 +201,8 @@ header {
 	font-size: 16px;
 	color: #DDDCDC;
 	text-align: center;
-	margin-bottom: 30px;
+	margin: 40px;
+	margin-bottom: 60px;
 }
 
 /* Icons RS */
@@ -156,66 +229,69 @@ header {
 /* A propos */
 #aPropos {
 	min-height: 100vh;
-	padding: 8%;
-	padding-top: 10%;
+	padding-top: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 #contenuAPropos {
 	width: 100%;
+	padding-right: 8%;
+	padding-left: 8%;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly;
 	align-items: center;
 }
 #paragraphes {
-	width: 100%;
+	margin: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 #paragrapheMoi {
-	width: 70%;
 	padding: 30px;
+	width: 750px;
 	color: #DDDCDC;
 	text-align: center;
-	margin-right: 200px;
 	margin-bottom: 40px;
-	background-color: #191919;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 15px;
 }
 #paragrapheMoi h2 {
-	color: #4FC3F7;
+	color: #00FFFF;
 	font-size: 26px;
 	margin-bottom: 15px;
 }
 #paragrapheMoi p {
 	font-size: 16px;
+	text-align: justify;
 }
 #paragrapheMoi p span {
 	color: orange;
 }
 #paragrapheObjectifs {
-	width: 70%;
 	padding: 30px;
+	width: 750px;
 	color: #DDDCDC;
 	text-align: center;
-	margin-left: 200px;
-	background-color: #191919;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 15px;
 }
 #paragrapheObjectifs h2 {
-	color: #4FC3F7;
+	color: #00FFFF;
 	font-size: 26px;
 	margin-bottom: 15px;
 }
 #paragrapheObjectifs p {
 	font-size: 16px;
+	text-align: justify;
 }
 #paragrapheObjectifs p span {
 	color: orange;
 }
 #cvEtTelechargement {
+	margin: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -226,7 +302,6 @@ header {
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #cv:hover {
-	width: 400px;
 	transform: scale(1.05);
 }
 #cvTelechargement {
@@ -234,17 +309,17 @@ header {
 	color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
-	background-color: #191919;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 15px;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #cvTelechargement:hover {
-	color: #00FFFF;
+	color: #8B01A0;
 }
 
 /* Demande d'info, bas de page */
 .demandeInfo {
-	margin: 10px;
+	margin: 15px;
 	font-size: 16px;
 	padding: 10px;
 	color: #A9A9A9;
@@ -255,66 +330,60 @@ header {
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 .demandeInfo a:hover {
-	color: #00FFFF;
+	color: #8B01A0;
 }
 
 /* Competences */
 #competences {
+	padding-top: 140px;
 	min-height: 100vh;
-	padding: 5%;
-	padding-top: 10%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 #titreCompetences {
-	color: #4FC3F7;
+	color: #00FFFF;
 	font-size: 32px;
 	margin-bottom: 20px;
 }
 #ensembleCompetences {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-#tableauCompetences {
-	width: 40%;
-}
-.ligneCompetences {
+#ligneCompetences {
+	margin: 20px;
+	margin-bottom: 40px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
 .celluleCompetence {
-	margin: 20px;
+	margin: 10px;
 	padding: 20px;
-	width: 35%;
-	align-self: stretch;
-	aspect-ratio: 1 / 1;
+	width: 210px;
+	height: 210px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	text-align: center;
-	background-color: #191919;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 15px;
-	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);;
-}
-.celluleCompetence:hover {
-	transform: scale(1.1);
 }
 .titreCelluleCompetence {
 	margin-bottom: 10px;
+	color: #E0A000;
 	font-weight: bold;
 	font-size: 20px;
 	cursor: default;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 .titreCelluleCompetence:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .celluleCompetence ul {
 	font-size: 16px;
@@ -322,75 +391,152 @@ header {
 	cursor: default;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
+.celluleCompetence ul li {
+	color: #DDDCDC;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
 .celluleCompetence ul li:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
-.ligneCompetences:first-child .celluleCompetence:first-child {
+#projetsEtChimie {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+#projets {
+	margin-right: 40px;
+	padding: 20px;
+	width: 300px;
+	height: 300px;
+	min-width: 300px;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgba(0,0,0,0.40);
+	border-radius: 15px;
+}
+#titreProjet {
 	color: #E0A000;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
-.ligneCompetences:first-child .celluleCompetence:nth-child(2) {
-	color: #FF5959;
+#titreProjet:hover {
+	transform: scale(1.05);
 }
-.ligneCompetences:nth-child(2) .celluleCompetence:first-child {
-	color: #82FFAC;
+#illustrationEtProjet {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
-.ligneCompetences:nth-child(2) .celluleCompetence:nth-child(2) {
-	color: #A135FF;
+#illustrationIT {
+	width: 150px;
+	position: absolute;
+    top: -110px;
+    left: -60px;
+}
+#jeuDeLaVieConway a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	z-index: 1;
+}
+#projetConway {
+	color: #DDDCDC;
+	text-align: center;
+	margin: 10px;
+	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#projetConway:hover {
+	transform: scale(1.05);
+	color: #8B01A0;
+}
+#conwayImage {
+	width: 55%;
+	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#conwayImage:hover {
+	transform: scale(1.05);
 }
 #chimie {
-	padding: 35px;
-	padding-left: 0px;
-	width: 30%;
+	padding: 30px;
+	width: 300px;
+	height: 300px;
+	min-width: 280px;
+	min-height: 280px;
+	margin-right: 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: #FFFFFF;
-	background-color: #191919;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 15px;
-	transition: transform 0.3s cubic-bezier(.46,.03,.52,.96);
-}
-#chimie:hover {
-	transform: scale(1.1);
 }
 #illustrationEtPasseEnChimie {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
 	font-size: 18px;
 	text-align: center;
-	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #illustrationChimie {
-	width: 200px;
+	width: 150px;
+	position: absolute;
+    top: -60px;
+    right: -75px;
+}
+#titreChimie {
+	margin-bottom: 20px;
+	color: #E0A000;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: default;
+	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
+}
+#titreChimie:hover {
+	transform: scale(1.05);
 }
 #passeEnChimie {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	z-index: 1;
 }
 #iconeThese {
 	margin-right: 10px;
 	width: 25px;
 }
 #theseChimie{
-	margin: 10px;
+	font-size: 16px;
+	padding-right: 10px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
-	color: aqua;
+	color: #00FFFF;
 }
 #theseChimie:hover {
-	color: #4FC3F7;
-	transform: scale(1.1);
+	color: #8B01A0;
+	transform: scale(1.05);
 }
 #publiChimie {
+	font-size: 16px;
 	margin: 10px;
 	margin-bottom: 5px;
+	padding-left: 30px;
 	color: #DDDCDC;
 }
 #listePubliChimie {
@@ -405,15 +551,15 @@ header {
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #listePubliChimie li:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 #listePubliChimie li a {
 	text-decoration: none;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
-	color: aqua;
+	color: #00FFFF;
 }
 #listePubliChimie li a:hover {
-	color: #4FC3F7;
+	color: #8B01A0;
 }
 .iconePublication {
 	margin-right: 10px;
@@ -421,23 +567,32 @@ header {
 	width: 15px;
 }
 #motsclefsChimie {
+	padding-left: 15px;
 	margin-top: 20px;
 	align-self: center;
-	font-size: 10px;
+	font-size: 9px;
 	color: #A9A9A9;
 }
 
 /* Contact */
 #contact {
 	min-height: 100vh;
-	padding: 5%;
-	padding-top: 10%;
+	padding-top: 160px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+#illustrationEtTitreContact {
+	position: relative;
+}
+#enveloppeContact {
+	width: 180px;
+	position: absolute;
+    top: -10px;
+    left: -170px;
+}
 #titreContact {
-	color: #4FC3F7;
+	color: #00FFFF;
 	font-size: 32px;
 	margin-bottom: 50px;
 }
@@ -470,12 +625,14 @@ header {
 	margin-bottom: 10px;
 	opacity: 0%;
 	color : red;
+	cursor: default;
 	font-size: 12px;
 }
 #confirmationEnvoi {
 	margin: 10px;
 	opacity: 0%;
 	color : green;
+	cursor: default;
 	font-size: 18px;
 }
 .message {
@@ -488,17 +645,18 @@ header {
 }
 #envoiFormulaireContact {
 	font-size: 16px;	
-	color: #FFFFFF;
+	color: #DDDCDC;
 	width: 120px;
 	height: 45px;
+	cursor: pointer;
 	background: none;
 	border-width: 2px;
 	border-radius: 15px;
-	border-color: #4FC3F7;
+	border-color: #00FFFF;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
 #envoiFormulaireContact:hover {
-	color: #00FFFF;
+	border-color: #8B01A0;
 	transform: scale(1.1);
 }
 

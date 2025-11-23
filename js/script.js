@@ -6,7 +6,7 @@ async function formulaire(prenomNom, email, sujet, message) {
   		method: 'POST',
   		headers: {
     		'content-type': 'application/json',
-    		'X-API-Key': 'sjk_6ca5afa9b4ab42b09129774dce438bd0',
+    		'X-API-Key': 'sjk_***',
   		},
   		body: JSON.stringify({
     		data: {
@@ -21,7 +21,7 @@ async function formulaire(prenomNom, email, sujet, message) {
 	const submission = await reponse.json()
 	
 	console.log('📦 Submission response:', submission)
-	const confirmationEnvoi = document.getElementById("confirmationEnvoi");
+	const confirmationEnvoi = document.getElementById('confirmationEnvoi');
 	confirmationEnvoi.style.opacity = "100%";
 }
 
@@ -29,10 +29,10 @@ document.getElementById('formulaireContact').addEventListener('submit', (event) 
 	
 	event.preventDefault(); 
 																								
-	const prenomNom = document.getElementById("prenomNom").value;
-	const email = document.getElementById("email").value;
-	const sujet = document.getElementById("sujet").value;
-	const message = document.getElementById("message").value;
+	const prenomNom = document.getElementById('prenomNom').value;
+	const email = document.getElementById('email').value;
+	const sujet = document.getElementById('sujet').value;
+	const message = document.getElementById('message').value;
 	
 	erreurPrenomNom.style.opacity = "0%";
 	erreurEmail.style.opacity = "0%";
@@ -52,3 +52,45 @@ document.getElementById('formulaireContact').addEventListener('submit', (event) 
 	
 });
 
+// Gestion du menu burger
+function ouvrirMenuBurger() {
+
+	const navigationResponsive = document.querySelector('.navigationResponsive');
+	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
+	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
+
+	navigationResponsive.classList.toggle('montrer-navigationResponsive');
+	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger')
+	ouvrirMenuBurger.style.display = "none";
+
+}
+
+function fermerMenuBurger() {
+
+	const navigationResponsive = document.querySelector('.navigationResponsive');
+	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
+	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
+
+	navigationResponsive.classList.remove('montrer-navigationResponsive');
+	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger');
+	ouvrirMenuBurger.style.display = "";
+
+}
+
+document.getElementById('boutonOuvrirBurger').addEventListener('click', ouvrirMenuBurger);
+
+document.getElementById('boutonFermerBurger').addEventListener('click', (event) => {
+
+	event.preventDefault
+	fermerMenuBurger
+
+});
+
+document.addEventListener('click', (event) => {
+
+	const navigationResponsive = document.querySelector('.navigationResponsive');
+	if (navigationResponsive.classList.contains('montrer-navigationResponsive') && !event.target.closest('#boutonOuvrirBurger')) {
+		fermerMenuBurger();
+	}
+
+});
