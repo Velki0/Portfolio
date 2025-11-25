@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Baptiste Gérardin">
+<meta name="title" property="og:title" content="Baptiste Gérardin - Portfolio">
+<meta name="description" content="Bienvenue sur mon Portfolio. Je vous laisse découvrir ma présentation en tant que concepteur et développeur d'applications Full Stack. N'hésitez pas à me contacter pour plus d'informations.">
+<link rel="icon" type="image/svg+xml" sizes="any" href="/images/logo.svg">
+<link href="css/theme.css" rel="stylesheet" type="text/css">
+<script defer src="js/script.js"></script>
+<title>Baptiste Gérardin - Portfolio</title>
+</head>	
+<body>
+	<!-- Header du site -->
+	<header id="racineNavigation">
+		<img id="iconBg" alt="Logo" src="images/logo.svg">
+		<nav role="navigation" id="menuNavigation">
+			<ul>
+				<li><a href="#accueil">Accueil</a></li>
+				<li><a href="#aPropos">À propos</a></li>
+				<li><a href="#competences">Compétences</a></li>
+			</ul>
+		</nav>
+		<a id="boutonContact" href="#contact">Contact</a>
+		<nav role="navigation" id="menuNavigationResponsive" class="navigationResponsive">
+			<a href="#" id="boutonFermerBurger" class="fermerMenuBurger">x</a>
+			<ul class="listeMenuBurger">
+				<li><a href="#accueil">Accueil</a></li>
+				<li><a href="#aPropos">À propos</a></li>
+				<li><a href="#competences">Compétences</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<a href ="#" id="boutonOuvrirBurger" class="ouvrirMenuBurger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+	</header>
+	<!-- Accueil / Page principale du site -->
+	<main id="accueil">
+		<div id="nomEtPhoto">
+			<h1 id="nom">Baptiste<br>Gérardin</h1>
+			<img id="photoProfil" alt="Photo de Profil" src="images/photo_profil.png">
+		</div>
+		<div id="titreEtDescription">
+			<h2 id="titre">Concepteur / Développeur d’applications Full Stack - Java - DevOps</h2><br>
+        	<h3 id="descriptionGeneral">Docteur en chimie organique, je suis en reconversion professionnelle dans le domaine du développement informatique.<br>Actuellement en formation pour la préparation d'un diplôme RNCP de niveau 6, je suis activement à la recherche d'une entreprise afin de signer un contrat d'apprentissage et de mettre en pratique mes nouvelles compétences.</h3>
+        	<div class="iconsRS">
+				<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
+				<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
+			</div>
+		</div>
+	</main>
+	<!-- Section A propos -->
+	<section id="aPropos">
+		<div id="contenuAPropos">
+			<div id="paragraphes">
+				<div id="paragrapheMoi">
+					<h2>À propos de moi</h2>
+					<p>Je suis Baptiste, 29 ans, en formation pour devenir <span>Concepteur / Développeur Full Stack.</span><br>
+				    Ma rigueur et ma persévérance, forgées lors de mon parcours en chimie, guident aujourd’hui ma reconversion vers le développement informatique. Depuis 2025, je me forme en autodidacte à travers divers projets, dont la création d’une API pour un jeu vidéo, alliant passion et apprentissage technique.</p>
+				</div>
+				<div id="paragrapheObjectifs">
+					<h2>Mes Objectifs</h2>
+					<p><span>Rigoureux et curieux</span>, j’ai une forte appétence pour découvrir et maîtriser les nouvelles technologies. Aujourd’hui, je cherche activement une entreprise et un contrat d’apprentissage afin de concrétiser mes connaissances et m’investir dans des projets réels.<br><br>Je souhaite contribuer efficacement à une équipe et évoluer dans un environnement stimulant, où confiance et bienveillance sont essentielles. Conscient du défi que représente cette reconversion, je mise sur ma <span>détermination</span> et ma <span>soif d’apprendre</span> pour en faire une réussite.</p>
+				</div>
+			</div>
+			<div id="cvEtTelechargement">
+				<a href="fichiers/CV_Baptiste_Gerardin.pdf" target="_blank"><img id="cv" alt="image de mon CV" src="images/cv.png"></a>
+				<a href="fichiers/CV_Baptiste_Gerardin.pdf" download="CV_Baptiste_Gerardin.pdf" id="cvTelechargement"><p>Téléchargez mon CV ici</p>
+				</a>
+			</div>
+		</div>
+		<p class="demandeInfo">Si mon profil vous intéresse, n’hésitez pas à me <a href="#contact">contacter</a> pour plus d’informations</p>
+	</section>
+	<!-- Section Compétences -->
+	<section id="competences">
+		<h2 id="titreCompetences">Compétences et Projets</h2>
+		<div id="ensembleCompetences">
+			<div id="ligneCompetences">
+				<div class="celluleCompetence">
+					<h3 class="titreCelluleCompetence">Front-End</h3>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>TypeScript</li>
+						<li>Angular</li>
+					</ul>
+				</div>
+				<div class="celluleCompetence">
+					<h3 class="titreCelluleCompetence">Back-End</h3>
+					<ul>
+						<li>Java</li>
+						<li>Spring</li>
+						<li>Maven</li>
+						<li>Docker</li>
+						<li>NodeJS</li>
+					</ul>
+				</div>
+				<div class="celluleCompetence">
+					<h3 class="titreCelluleCompetence">Base de Données</h3>
+					<ul>
+						<li><br></li>
+						<li>MySQL / MariaDB</li>
+						<li>MongoDB</li>
+						<li>PostgreSQL</li>
+						<li><br></li>
+					</ul>
+				</div>
+				<div class="celluleCompetence">
+					<h3 class="titreCelluleCompetence">DevOps</h3>
+					<ul>
+						<li>Agile / Scrum</li>
+						<li>UML</li>
+						<li>Git / GitHub</li>
+						<li>CI/CD</li>
+						<li>Jenkins</li>
+					</ul>
+				</div>
+			</div>
+			<div id="projetsEtChimie">
+				<div id="projets">
+				<h3 id="titreProjet">Projets</h3>
+					<div id="illustrationEtProjet">
+						<img id="illustrationIT" alt="Illustration d'un ordinateur" src="images/ordi.svg">
+						<div id="jeuDeLaVieConway" href="https://github.com/Velki0/JeuDeLaVie">
+							<a href="https://github.com/Velki0/JeuDeLaVie" target="_blank"><h4 id="projetConway">Jeu de la Vie - Conway</h4></a>
+							<a href="https://github.com/Velki0/JeuDeLaVie" target="_blank"><img id="conwayImage" alt="Image de mon projet de Jeu de la Vie de Conway" src="images/conway.png"></a>
+						</div>
+					</div>
+				</div>
+				<div id="chimie">
+					<div id="illustrationEtPasseEnChimie">
+						<img id="illustrationChimie" alt="Illustration d'un benzène et et un erlenmeyer" src="images/chimie.svg">
+						<div id="passeEnChimie">
+							<h3 id="titreChimie">Chimie</h3>
+							<a id="theseChimie" href="https://theses.hal.science/tel-04187215" target="_blank"><img id="iconeThese" alt="Icone d'un livre pour représenter une thèse" src="images/these.png"><p>Ma thèse</p></a>
+							<p id="publiChimie">Publications :</p>
+							<ul id="listePubliChimie">
+								<li>
+									<img class="iconePublication" alt="Icone représentation une parution dans un journal scientifique" src="images/publication.png">
+									<a href="https://pubs.acs.org/doi/abs/10.1021/acs.orglett.1c00812" target="_blank">C-H Arrylation</a>
+								</li>
+								<li>
+									<img class="iconePublication" alt="Icone représentation une parution dans un journal scientifique" src="images/publication.png">
+									<a href="https://pubs.acs.org/doi/10.1021/acs.orglett.2c03223" target="_blank">Annulation d'Arylindoles</a>
+								</li>
+							</ul>
+			    			<p id="motsclefsChimie">Mots-Clefs :<br>Synthèse orgnanique, Catalyse par les Métaux de transistion, Réactions dominos, Activation C-H</p>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="demandeInfo">N’hésitez pas à me retrouver sur <a href="https://github.com/Velki0" target="_blank">GitHub</a>.<br> Vous pourrez retrouver ce portfolio, quelques petits projets personnels et des exercices de ma formation.</p>
+	</section>
+	<!-- Section Contact -->
+	<section id="contact">
+		<div id="illustrationEtTitreContact">
+			<img id="enveloppeContact" alt="Illustration d'une enveloppe" src="images/contact.svg">
+			<h2 id="titreContact">Contact</h2>
+		</div>
+		<form id="formulaireContact">
+			<div class="celluleContact">
+				<label class="labelContact" for="prenomNom">Nom / Prénom</label>
+				<input id="prenomNom" class="inputContact" type="text" placeholder="Votre nom et/ou prénom">
+				<p id="erreurPrenomNom">Nom incorrect</p>		   
+			</div>
+			<div class="celluleContact" action="httpbin.org/post" method="POST">
+				<label class="labelContact" for="email">Email</label>
+				<input id="email" class="inputContact" type="text" placeholder="Votre email@email.com">
+				<p id="erreurEmail">Email incorrect</p>		   
+			</div>
+			<div class="celluleContact">
+				<label class="labelContact" for="sujet">Sujet</label>
+				<input id="sujet" class="inputContact" type="text" placeholder="Quelle est votre demande ?">
+				<p id="erreurSujet">Sujet incorrect</p>		   
+			</div>
+			<div class="celluleContact">
+				<label class="labelContact" for="message">Message</label>
+				<textarea id="message" class="inputContact message" type="text" placeholder="Laissez moi un petit message ici"></textarea>
+				<p id="erreurMessage">Message incorrect</p>		   
+			</div>
+			<div id="envoiContact">
+				<button id="envoiFormulaireContact" type="submit">Envoyer</button>
+				<p id="confirmationEnvoi">Envoyé ! Merci pour le message !</p>	
+			</div>
+		</form>
+	</section>
+	<!-- Footer du site -->
+	<footer id="piedDePage">
+		<p id="textePiedDePage">© 2025 Baptiste Gérardin - Tous droits réservés</p>
+		<div class="iconsRS">
+			<a href="https://www.linkedin.com/in/baptiste-g%C3%A9rardin-778192172/" target="_blank"><img alt="Icone de LinkedIn" class="iconLinkedin" src="images/linkedin_icon.svg"></a>
+			<a href="https://github.com/Velki0" target="_blank"><img alt="Icone de Github" class="iconGithub" src="images/github_icon.svg"></a>
+		</div>
+	</footer>
+</body>
+</html>

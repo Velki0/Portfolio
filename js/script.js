@@ -20,7 +20,7 @@ async function formulaire(prenomNom, email, sujet, message) {
 
 	const submission = await reponse.json()
 	
-	console.log('📦 Submission response:', submission)
+	console.log('Submission response:', submission)
 	const confirmationEnvoi = document.getElementById('confirmationEnvoi');
 	confirmationEnvoi.style.opacity = "100%";
 }
