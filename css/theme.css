@@ -182,6 +182,7 @@ header {
 	margin: 10px;
 	color: #FFFFFF;
 	text-align: center;
+	line-height: 100%;
 }
 #photoProfil {
 	width: min(280px, 50vw);
@@ -240,7 +241,7 @@ header {
 	justify-content: center;
 	margin-right: min(40px, 5vw);
 	margin-left: min(40px, 5vw);
-	gap: min(40px, 5vw);
+	gap: min(20px, 5vw);
 }
 .iconLinkedin {
 	width: 32px;
@@ -659,6 +660,7 @@ header {
 	}
 	#illustrationChimie {
 		width: 120px;
+		left: -75px;
 	}
 	#passeEnChimie {
 		gap: 5px;
@@ -686,7 +688,7 @@ header {
 /* Contact */
 #contact {
 	min-height: 100vh;
-	padding-top: min(60px,22vw);
+	padding-top: min(60px,20vw);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -696,10 +698,10 @@ header {
 	position: relative;
 }
 #enveloppeContact {
-	width: 150px;
+	width: 120px;
 	position: absolute;
     top: -10px;
-    left: -170px;
+    left: -110px;
 }
 #titreContact {
 	color: #00FFFF;
@@ -772,9 +774,6 @@ header {
 
 @media only screen and (max-width: 720px) {
 	
-	#contact {
-		padding-top: 25vw;
-	}
     #illustrationEtTitreContact {
         display: flex;
         flex-direction: column;
@@ -810,7 +809,7 @@ header {
 	align-items: center;
 }
 #textePiedDePage {
-	font-size: clamp(0.5rem, calc(0.6vw + 0.3rem), 1rem);
+	font-size: clamp(0.5rem, calc(0.6vw + 0.3rem), 0.7rem);
 	color: #A9A9A9;
 	font-weight: normal;
 	margin-left: 5%;
