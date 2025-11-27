@@ -55,10 +55,12 @@ document.getElementById('formulaireContact').addEventListener('submit', (event) 
 // Gestion du menu burger
 function ouvrirMenuBurger() {
 
+	const racineNavigation = document.getElementById('racineNavigation');
 	const navigationResponsive = document.querySelector('.navigationResponsive');
 	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
 	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
 
+	racineNavigation.style.backgroundColor = "rgba(0,0,0,0.90)"
 	navigationResponsive.classList.toggle('montrer-navigationResponsive');
 	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger')
 	ouvrirMenuBurger.style.display = "none";
@@ -67,10 +69,12 @@ function ouvrirMenuBurger() {
 
 function fermerMenuBurger() {
 
+	const racineNavigation = document.getElementById('racineNavigation');
 	const navigationResponsive = document.querySelector('.navigationResponsive');
 	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
 	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
 
+	racineNavigation.style.backgroundColor = "rgba(0,0,0,0.40)"
 	navigationResponsive.classList.remove('montrer-navigationResponsive');
 	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger');
 	ouvrirMenuBurger.style.display = "";
