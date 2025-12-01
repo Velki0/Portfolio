@@ -59,11 +59,13 @@ function ouvrirMenuBurger() {
 	const navigationResponsive = document.querySelector('.navigationResponsive');
 	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
 	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
+	const iconBg = document.getElementById('iconBg');
 
 	racineNavigation.style.backgroundColor = "rgba(0,0,0,0.90)"
 	navigationResponsive.classList.toggle('montrer-navigationResponsive');
 	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger')
-	ouvrirMenuBurger.style.display = "none";
+	ouvrirMenuBurger.style.opacity = "0";
+	iconBg.style.opacity = "0";
 
 }
 
@@ -73,11 +75,13 @@ function fermerMenuBurger() {
 	const navigationResponsive = document.querySelector('.navigationResponsive');
 	const fermerMenuBurger = document.querySelector('.fermerMenuBurger');
 	const ouvrirMenuBurger = document.querySelector('.ouvrirMenuBurger');
+	const iconBg = document.getElementById('iconBg');
 
 	racineNavigation.style.backgroundColor = "rgba(0,0,0,0.40)"
 	navigationResponsive.classList.remove('montrer-navigationResponsive');
 	fermerMenuBurger.classList.toggle('montrer-fermerMenuBurger');
-	ouvrirMenuBurger.style.display = "";
+	ouvrirMenuBurger.style.opacity = '100%';
+	iconBg.style.opacity = '100%';
 
 }
 
