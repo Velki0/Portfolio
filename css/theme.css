@@ -8,8 +8,8 @@
 }
 
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	font-family: Suisseint1, sans-serif;
 	letter-spacing: 0.2px;
@@ -29,20 +29,28 @@ body {
 	background-color: #10001B;
 }
 
+section, main {
+	padding: clamp(80px, 10vw, 140px) 20px clamp(60px, 8vw, 120px);
+}
+
 /* Header */
 header {
 	position: fixed;
 	top: 20px;
 	left: 50%;
-	transform: translateX(-50%); 
-	width: 60%;
-	padding: 10px;
+	transform: translateX(-50%);
+	width: min(1100px, 92%);
+	padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 24px);
+	gap: clamp(10px, 2vw, 30px);
 	z-index: 1;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 
@@ -186,7 +194,8 @@ header {
 /* Main */
 #accueil {
 	min-height: 100vh;
-	padding-top: min(60px,20vw);
+	padding-top: clamp(100px, 12vw, 180px);
+	padding-bottom: clamp(40px, 6vw, 100px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -201,7 +210,7 @@ header {
 }
 #nom {
 	font-size: clamp(1.8rem, calc(7vw + 1rem), 6rem);
-	font-family: Planet_Space;
+	font-family: Planet_Space, sans-serif;
 	margin: 10px;
 	color: #FFFFFF;
 	text-align: center;
@@ -247,8 +256,8 @@ header {
 		gap: 5px;
 	}
 	#titre {
-		margin-top: 0px;
-		margin-bottom: 0px;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 	#descriptionGeneral {
 		margin-bottom: 20px;
@@ -283,32 +292,34 @@ header {
 
 /* A propos */
 #aPropos {
-	min-height: 100vh;
-	padding-top: min(100px,22vw);
+	scroll-margin-top: 120px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 #contenuAPropos {
-	width: 100%;
+	width: min(1400px, 100%);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
-	gap: 40px;
+	align-items: flex-start;
+	gap: clamp(25px, 3vw, 50px);
 }
 #paragraphes {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px;
+	gap: clamp(12px, 1.5vw, 22px);
 }
 #paragrapheMoi {
-	padding: 30px;
+	padding: clamp(18px, 2vw, 28px);
 	width: min(750px, 90vw);
 	color: #DDDCDC;
 	text-align: center;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 #paragrapheMoi h2 {
@@ -324,11 +335,14 @@ header {
 	color: orange;
 }
 #paragrapheObjectifs {
-	padding: 30px;
+	padding: clamp(18px, 2vw, 28px);
 	width: min(750px, 90vw);
 	color: #DDDCDC;
 	text-align: center;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 #paragrapheObjectifs h2 {
@@ -344,7 +358,7 @@ header {
 	color: orange;
 }
 #cvEtTelechargement {
-	margin: 40px;
+	margin: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -362,7 +376,10 @@ header {
 	color: #FFFFFF;
 	text-align: center;
 	text-decoration: none;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 	transition: 0.3s cubic-bezier(.46,.03,.52,.96);
 }
@@ -379,21 +396,33 @@ header {
 	#contenuAPropos {
 		flex-wrap: nowrap;
 		flex-direction: column;
-		gap: 5px;
+		gap: 12px;
 	}
 	#paragraphes {
 		margin: 10px;
 		gap: 10px;
 	}
 	#cvEtTelechargement {
-		margin: 0px;
+		width: 100%;
+		margin: 20px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#cv {
+		margin: 0 auto;
+		display: block;
+	}
+	#cvTelechargement {
+		margin: 10px auto 0;
 	}
 	
 }
 
 /* Demande d'info, bas de page */
 .demandeInfo {
-	margin: 15px;
+	margin-top: clamp(20px, 3vw, 40px);
+	margin-bottom: 0;
 	font-size: clamp(0.6rem, calc(0.5vw + 0.6rem), 0.9rem);
 	padding: 10px;
 	color: #A9A9A9;
@@ -429,24 +458,26 @@ header {
 	justify-content: center;
 }
 #ligneCompetences {
-	margin: 20px;
-	margin-bottom: 40px;
+	margin: 10px 0 25px;
+	gap: clamp(10px, 1.5vw, 18px);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	gap: 20px;
 }
 .celluleCompetence {
-	padding: 20px;
-	width: 210px;
+	width: clamp(170px, 20vw, 210px);
+	padding: clamp(14px, 1.5vw, 20px);
 	aspect-ratio: 1 / 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
 	text-align: center;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 .titreCelluleCompetence {
@@ -478,17 +509,20 @@ header {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	gap: 20px;
+	gap: clamp(10px, 1.5vw, 18px);
 }
 #projets {
 	padding: 20px;
-	width: 300px;
+	width: clamp(240px, 28vw, 300px);
 	aspect-ratio: 1 / 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 #titreProjet {
@@ -540,14 +574,17 @@ header {
 }
 #chimie {
 	padding: 30px;
-	width: 300px;
+	width: clamp(240px, 28vw, 300px);
 	aspect-ratio: 1 / 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: #FFFFFF;
-	background-color: rgba(0,0,0,0.40);
+	background: rgba(255,255,255,0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: 15px;
 }
 #illustrationEtPasseEnChimie {
@@ -649,13 +686,14 @@ header {
 		padding-top: 25vw;
 	}
 	#titreCompetences {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 	#ligneCompetences {
-		gap: 8px;
+		gap: 12px;
 	}
 	.celluleCompetence {
-		width: 180px;
+		width: 46%;
+		min-width: 160px;
 	}
 	.titreCelluleCompetence {
 		font-size: 16px;
@@ -665,9 +703,10 @@ header {
 	}
 	#projetsEtChimie {
 		flex-direction: column;
+		gap: 12px;
 	}
 	#projets {
-		width: 250px;
+		width: min(100%, 280px);
 	}
 	#titreProjet {
 		font-size: 16px;
@@ -679,7 +718,7 @@ header {
 		font-size: 14px;
 	}
 	#chimie {
-		width: 250px;
+		width: min(100%, 280px);
 	}
 	#illustrationChimie {
 		width: 120px;
@@ -758,14 +797,14 @@ header {
 }
 .celluleContact p {
 	margin-bottom: 10px;
-	opacity: 0%;
+	opacity: 0;
 	color : red;
 	cursor: default;
 	font-size: 12px;
 }
 #confirmationEnvoi {
 	margin: 10px;
-	opacity: 0%;
+	opacity: 0;
 	color : green;
 	cursor: default;
 	font-size: 18px;
@@ -825,6 +864,7 @@ header {
 /* Pied de page */
 #piedDePage {
 	width: 100%;
+	padding: 10px 20px;
 	margin-bottom: 15px;
 	display: flex;
 	flex-direction: row;
