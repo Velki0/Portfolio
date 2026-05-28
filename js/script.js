@@ -47,8 +47,8 @@ document.getElementById('formulaireContact').addEventListener('submit', (event) 
 	formulaire(prenomNom, email, sujet, message);
 
 	function validationPrenomNom() { return prenomNom.match(/^[a-zA-Z ]+$/); }
-	function validationEmail() { return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/); };
-	function validationSujet() { return sujet.match(/^[\w\d ]+$/); };
+	function validationEmail() { return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/); }
+	function validationSujet() { return sujet.match(/^[\w\d ]+$/); }
 	
 });
 
